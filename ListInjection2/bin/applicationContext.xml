@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="inst-1" class="com.digit.InstituteDtLs">
+		<constructor-arg value="ABC"></constructor-arg>
+		<constructor-arg value="2001" type="int"></constructor-arg>
+		<constructor-arg value="2000000" type="int"></constructor-arg>
+	</bean>
+
+	<bean id="inst-2" class="com.digit.InstituteDtLs">
+		<constructor-arg value="DEF"></constructor-arg>
+		<constructor-arg value="1991" type="int"></constructor-arg>
+		<constructor-arg value="18990000" type="int"></constructor-arg>
+	</bean>
+
+	<bean id="inst-3" class="com.digit.InstituteDtLs">
+		<constructor-arg value="GHI"></constructor-arg>
+		<constructor-arg value="2021" type="int"></constructor-arg>
+		<constructor-arg value="190000" type="int"></constructor-arg>
+	</bean>
+
+	<bean id="inst" class="com.digit.Institute">
+		<constructor-arg value="9" type="int"></constructor-arg>
+		<constructor-arg value="This is Statement"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref bean="inst-1" />
+				<ref bean="inst-2" />
+				<ref bean="inst-3" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>

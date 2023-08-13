@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="ques" class="com.digit.Question">
+
+		<property name="qid">
+			<value>1111</value>
+		</property>
+
+		<property name="question">
+			<value>Capital</value>
+		</property>
+
+		<property name="answers">
+			<map>
+				<entry key="AAA" value="Delhi"></entry>
+				<entry key="CCCC" value="Mumbai"></entry>
+			</map>
+		</property>
+
+	</bean>
+
+
+</beans>
